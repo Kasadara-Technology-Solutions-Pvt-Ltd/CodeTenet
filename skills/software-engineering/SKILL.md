@@ -3,7 +3,7 @@ name: software-engineering
 description: Apply comprehensive enterprise programming guidelines and software engineering laws to architecture, coding, review, debugging, testing, APIs, data, security, performance, and delivery. Use for any software engineering task in any programming language or framework, including autonomous coding.
 ---
 
-# CodeTenet — Enterprise Software Engineering
+# CodeTenet - Enterprise Software Engineering
 
 ## Mission
 
@@ -64,7 +64,7 @@ Summarize the change, key design decisions, executed checks and outcomes, remain
 
 ---
 
-## 2. Core design principles — always consider
+## 2. Core design principles - always consider
 
 ### SOLID, applied selectively
 
@@ -74,15 +74,15 @@ Summarize the change, key design decisions, executed checks and outcomes, remain
 - **Interface Segregation:** Expose small, consumer-appropriate contracts; do not force unused operations on implementations.
 - **Dependency Inversion:** Separate high-level policy from volatile details where substitutability or testing justifies the boundary. Do not introduce interfaces for trivial stable functions.
 
-### DRY — Don't Repeat Yourself
+### DRY - Don't Repeat Yourself
 
 Keep **knowledge and business rules** authoritative in one place. Extract genuine shared behavior; tolerate independent code that merely *looks* alike. Never couple distinct domains simply to remove duplicate lines.
 
-### KISS — Keep It Simple
+### KISS - Keep It Simple
 
 Prefer direct control flow, understandable names, limited moving parts, and predictable behavior. Simplicity does **not** mean ignoring security, errors, edge cases or operational needs.
 
-### YAGNI — You Aren't Gonna Need It
+### YAGNI - You Aren't Gonna Need It
 
 Do not implement speculative features or generalize for imagined users. Introduce expansion seams when a **concrete** requirement or demonstrable change cost justifies them.
 
@@ -104,7 +104,7 @@ Names, contracts, errors, defaults and APIs should behave as a reasonable caller
 
 ---
 
-## 3. Architecture laws — model real-world consequences
+## 3. Architecture laws - model real-world consequences
 
 | Law / principle | Agent behavior |
 |---|---|
@@ -336,13 +336,13 @@ For small changes, keep the same information concise rather than forcing a lengt
 
 The files below are part of this skill and should be consulted **when relevant**, not copied indiscriminately into every coding task:
 
-- `references/programming-standards.md` — detailed coding, API, data, security, concurrency, configuration, documentation and operational rules. **Read when implementing or reviewing production code.**
-- `references/architecture-decision-guide.md` — meaningful boundaries, architecture laws, evolutionary delivery, failure modes, trade-off recording. **Read for system design, integration design, scale-related decisions, and substantial refactors.**
-- `references/testing-verification.md` — risk-based test strategy, regression protection, evidence-based quality gates, and test matrix. **Read for coding, fixes, quality assessments and release review.**
-- `references/code-review-checklist.md` — concise review checklist. **Read for reviews and final verification.**
-- `references/principle-conflicts.md` — examples of choosing between competing principles. **Read whenever a design trade-off is material.**
-- `examples/scenario-playbooks.md` — concrete examples of feature implementation, bug fixes, refactoring, API design, library design, database work, distributed workflows, security, performance, legacy modernization and reviews. **Read the applicable scenario.**
-- `examples/agent-task-template.md` — optional structured task handoff.
+- `references/programming-standards.md` - detailed coding, API, data, security, concurrency, configuration, documentation and operational rules. **Read when implementing or reviewing production code.**
+- `references/architecture-decision-guide.md` - meaningful boundaries, architecture laws, evolutionary delivery, failure modes, trade-off recording. **Read for system design, integration design, scale-related decisions, and substantial refactors.**
+- `references/testing-verification.md` - risk-based test strategy, regression protection, evidence-based quality gates, and test matrix. **Read for coding, fixes, quality assessments and release review.**
+- `references/code-review-checklist.md` - concise review checklist. **Read for reviews and final verification.**
+- `references/principle-conflicts.md` - examples of choosing between competing principles. **Read whenever a design trade-off is material.**
+- `examples/scenario-playbooks.md` - concrete examples of feature implementation, bug fixes, refactoring, API design, library design, database work, distributed workflows, security, performance, legacy modernization and reviews. **Read the applicable scenario.**
+- `examples/agent-task-template.md` - optional structured task handoff.
 
 **Execution contract:** Read this `SKILL.md` first. Discover enough project context to decide which companion pages apply; read those pages before making consequential changes. Avoid fetching every reference when the task is narrow.
 
@@ -350,8 +350,6 @@ The files below are part of this skill and should be consulted **when relevant**
 
 This skill synthesizes and operationalizes guidance from:
 
-1. **Laws of Software Engineering** — https://lawsofsoftwareengineering.com/ — architecture, teams, planning, quality, scale, design and decision principles.
-2. **Principles of Software Development: SOLID, DRY, KISS, and more** — https://scalastic.io/en/solid-dry-kiss/ — SOLID, DRY, KISS, YAGNI, convention over configuration, composition and Law of Demeter.
-3. **10 Good Coding Principles to Improve Code Quality** — https://bytebytego.com/guides/10-good-coding-principles-to-improve-code-quality/ — coding standards, documentation, robustness, testability, abstraction, patterns, state, refactoring and security.
+1. **Laws of Software Engineering** - https://lawsofsoftwareengineering.com/ - architecture, teams, planning, quality, scale, design and decision principles.
 
 The operational rules, prioritization, safety qualifications and AI workflow are original adaptations. Not all laws are equally relevant to every task, and the source site's brief descriptions are not exhaustive definitions or formal proofs. Apply documented constraints and evidence first.
