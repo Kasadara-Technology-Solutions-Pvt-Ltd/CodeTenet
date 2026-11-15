@@ -1,0 +1,22 @@
+{
+  "name": "codetenet",
+  "version": "1.0.0",
+  "description": "A comprehensive, language-agnostic software engineering skill that guides AI coding agents through architecture, implementation, debugging, refactoring, security, performance, testing, and code reviews using established engineering principles and laws.",
+  "author": {
+    "name": "Kasadara Technology Solutions",
+    "url": "https://github.com/Kasadara-Technology-Solutions-Pvt-Ltd"
+  },
+  "repository": "https://github.com/Kasadara-Technology-Solutions-Pvt-Ltd/CodeTenet",
+  "homepage": "https://github.com/Kasadara-Technology-Solutions-Pvt-Ltd/CodeTenet#readme",
+  "keywords": [
+    "codetenet",
+    "kasadara",
+    "software-engineering",
+    "programming-guidelines",
+    "architecture",
+    "security",
+    "code-review",
+    "testing",
+    "ai-agents"
+  ]
+}
