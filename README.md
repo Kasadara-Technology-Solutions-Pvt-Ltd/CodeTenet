@@ -1,4 +1,4 @@
-# CodeTenet — Claude Plugin by Kasadara
+# CodeTenet - Claude Plugin by Kasadara
 
 **Publisher: Kasadara Technology Solutions** | **Owner: Kasadara** | **Version: 1.0.0** | Documentation-only plugin | No MCP servers, hooks, executables, network access, or runtime dependencies.
 
@@ -69,7 +69,7 @@ The original unified skill README and the full 12-scenario playbooks are preserv
 
 ## Extended guide and examples
 
-# Enterprise Programming & Software Engineering — Unified AI Skill
+# Enterprise Programming & Software Engineering - Unified AI Skill
 
 A **single comprehensive, language-agnostic skill** merging the *Enterprise Programming Guide* and *Enterprise Software Engineering* into a practical autonomous coding standard. The primary `SKILL.md` defines behavior; companion references deepen implementation, architecture, verification, and trade-off decisions. This is an original synthesis of coding principles and engineering laws, not a verbatim reproduction of source articles.
 
@@ -91,14 +91,14 @@ skills/software-engineering/
 
 ## Installation
 
-**Claude Code — project-level:**
+**Claude Code - project-level:**
 
 ```bash
 mkdir -p .claude/skills
 cp -R skills/software-engineering .claude/skills/
 ```
 
-**Claude Code — user-level:**
+**Claude Code - user-level:**
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -123,73 +123,73 @@ The agent reads `SKILL.md` first and uses supporting files selectively. No singl
 
 Each example can be pasted into an AI coding agent. The corresponding detailed workflow is in `examples/scenario-playbooks.md`.
 
-### Scenario 1 — Implement a new feature
+### Scenario 1 - Implement a new feature
 
 > Use the enterprise programming and software engineering skill. Add an order discount eligibility rule. First locate existing price and promotion policies and tests. Implement the smallest cohesive change without duplicating business knowledge. Cover thresholds, invalid inputs and regressions; report tests you actually ran.
 
 **What good looks like:** One authoritative discount rule, explicit behavior, tests, no speculative rules engine. Relevant principles: SRP, DRY, KISS, YAGNI.
 
-### Scenario 2 — Debug a duplicate-processing bug
+### Scenario 2 - Debug a duplicate-processing bug
 
 > Use the skill to investigate why resubmitted invoice requests sometimes create duplicates. Reproduce the failure, inspect retry and transaction behavior, fix the root cause and verify concurrency and partial-failure scenarios. Preserve current external API contracts.
 
 **What good looks like:** Durable idempotency/uniqueness where needed, a reproducing regression test and no UI-only workaround. Relevant laws: Murphy's Law, Hyrum's Law.
 
-### Scenario 3 — Refactor a complex legacy module
+### Scenario 3 - Refactor a complex legacy module
 
 > Apply the skill to refactor the existing large service for maintainability only. Establish characterization tests, identify cohesive responsibilities, preserve public behavior and extract changes incrementally. Avoid new packages or large-scale redesign without a concrete need.
 
 **What good looks like:** Small reviewable changes with preserved behavior. Relevant laws: Gall's Law, Hyrum's Law, Boy Scout Rule.
 
-### Scenario 4 — Create an enterprise REST API
+### Scenario 4 - Create an enterprise REST API
 
 > Design and implement a REST API for client accounts using the repository's existing stack. Define request/response contracts, authorization, validation, conflicts, pagination, migration impact, safe errors and tests. Do not add architecture layers merely to demonstrate SOLID.
 
 **What good looks like:** Stable documented contracts, access control and consistent state transitions. Relevant principles: SRP, DIP, Law of Demeter, least astonishment.
 
-### Scenario 5 — Publish a framework-neutral utility library
+### Scenario 5 - Publish a framework-neutral utility library
 
 > Build a reusable zero-runtime-dependency TypeScript library. Identify required APIs, public contract, packaging/typings and failure semantics. Favor standard library functions, avoid speculative plugins and verify browser/Node compatibility and package output.
 
 **What good looks like:** Clear small exports, tests, stable types and no framework lock-in. Relevant principles: KISS, YAGNI, composition.
 
-### Scenario 6 — Design a distributed worker
+### Scenario 6 - Design a distributed worker
 
 > Implement an event consumer that writes to a relational database. Document duplicate delivery, ordering, partial failures, transaction scope, retries, cancellation and idempotency. Test crash-after-commit and replay paths. Don't promise exactly-once behavior without proof.
 
 **What good looks like:** Recoverable state changes with defined failure semantics. Relevant laws: distributed computing fallacies, leaky abstractions, Murphy's Law.
 
-### Scenario 7 — Safely migrate a database
+### Scenario 7 - Safely migrate a database
 
 > Add a new required field to an existing production table. Inspect old records and application compatibility, propose a phased expand/backfill/contract migration, consider locking and rollback, then create the changes and migration tests.
 
 **What good looks like:** Safe mixed-version rollout with existing data protected. Relevant laws: Hyrum's Law, unintended consequences.
 
-### Scenario 8 — Address a security vulnerability
+### Scenario 8 - Address a security vulnerability
 
 > Review report access authorization for cross-tenant data exposure. Trace trust boundaries, fix resource-level authorization on the server, check cache isolation and add denied-access tests. Do not log sensitive data or rely on hiding UI links.
 
 **What good looks like:** Explicit access checks and negative tests. Relevant priorities: least privilege, defense in depth, security before convenience.
 
-### Scenario 9 — Investigate slow performance
+### Scenario 9 - Investigate slow performance
 
 > Diagnose slow search endpoints. Capture a baseline using realistic workloads, inspect queries and allocations, identify the actual bottleneck and implement the minimum justified improvement. Compare before/after metrics and test correctness.
 
 **What good looks like:** Measured improvement and a reason for any added complexity. Relevant laws: Amdahl's Law, premature optimization, Goodhart's Law.
 
-### Scenario 10 — Review an always-on background service
+### Scenario 10 - Review an always-on background service
 
 > Analyze this continuously running service for cancellation, exception propagation, infinite loops, resource leaks, unbounded queues, safe restart and duplicate operations. Provide concrete findings, fixes and test scenarios.
 
 **What good looks like:** Safe lifecycle management, bounded resource use and clear recovery behavior. Relevant laws: Murphy's Law, leaky abstractions.
 
-### Scenario 11 — Evaluate a proposed microservices rewrite
+### Scenario 11 - Evaluate a proposed microservices rewrite
 
 > Compare a modular monolith, selective extraction and full microservice migration for this system. Use documented load, independent deployment needs, team ownership and failure risks. Produce an ADR with trade-offs and a migration strategy; do not equate complexity with enterprise quality.
 
 **What good looks like:** Evidence-based architecture choice. Relevant laws: Conway's Law, Gall's Law, Second-System Effect.
 
-### Scenario 12 — Perform a high-quality code review
+### Scenario 12 - Perform a high-quality code review
 
 > Review this pull request against the enterprise programming skill. Prioritize correctness, security, data integrity, compatibility, concurrency and test quality. Give actionable findings with locations and severity. Distinguish checks you actually executed from claims in the PR description.
 
@@ -207,9 +207,6 @@ Each example can be pasted into an AI coding agent. The corresponding detailed w
 | Need an agent handoff prompt | `examples/agent-task-template.md` |
 
 ## Sources and attribution
-
-- https://scalastic.io/en/solid-dry-kiss/
-- https://bytebytego.com/guides/10-good-coding-principles-to-improve-code-quality/
 - https://lawsofsoftwareengineering.com/
 
 These are background references; this package consolidates and extends the ideas into original operational instructions. The examples are illustrative; adapt them to your repository's constraints. Source websites' content is not redistributed.
