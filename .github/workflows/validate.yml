@@ -1,0 +1,90 @@
+name: Validate CodeTenet Plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Plugin structure and content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate manifest, skill, text, and icon
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import pathlib
+          import struct
+          import sys
+
+          root = pathlib.Path(".")
+          issues = []
+
+          manifest_path = root / ".claude-plugin" / "plugin.json"
+          skill_path = root / "skills" / "software-engineering" / "SKILL.md"
+          icon_path = root / ".claude-plugin" / "icon.png"
+
+          if not manifest_path.is_file():
+              issues.append("Missing .claude-plugin/plugin.json")
+          else:
+              try:
+                  manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                  if manifest.get("name") != "codetenet":
+                      issues.append("Plugin manifest name must be codetenet")
+                  if not manifest.get("version"):
+                      issues.append("Plugin manifest must include version")
+              except (ValueError, UnicodeError) as exc:
+                  issues.append(f"Invalid plugin manifest: {exc}")
+
+          if not skill_path.is_file():
+              issues.append("Missing software-engineering/SKILL.md")
+          else:
+              content = skill_path.read_text(encoding="utf-8")
+              if not content.startswith("---\n"):
+                  issues.append("SKILL.md must begin with YAML frontmatter")
+              if "name: software-engineering" not in content.split("---", 2)[1]:
+                  issues.append("Skill frontmatter must declare name: software-engineering")
+
+          if not icon_path.is_file():
+              issues.append("Missing .claude-plugin/icon.png")
+          else:
+              raw = icon_path.read_bytes()
+              if len(raw) > 2 * 1024 * 1024:
+                  issues.append("Icon must be 2 MB or smaller")
+              if raw[:8] != b"\x89PNG\r\n\x1a\n" or len(raw) < 24:
+                  issues.append("Icon must be a valid PNG file")
+              else:
+                  width, height = struct.unpack(">II", raw[16:24])
+                  if width != height or not 512 <= width <= 2048:
+                      issues.append("Icon must be square, 512-2048 pixels per side")
+
+          for file in root.rglob("*"):
+              if not file.is_file() or ".git" in file.parts:
+                  continue
+              if file.suffix.lower() not in {".md", ".json", ".yml", ".yaml"}:
+                  continue
+              raw = file.read_bytes()
+              if any(b > 127 for b in raw):
+                  issues.append(f"Non-ASCII text detected: {file}")
+              if file.suffix.lower() == ".json":
+                  try:
+                      json.loads(raw)
+                  except (ValueError, UnicodeError) as exc:
+                      issues.append(f"Invalid JSON in {file}: {exc}")
+
+          if issues:
+              for issue in issues:
+                  print(f"ERROR: {issue}", file=sys.stderr)
+              sys.exit(1)
+
+          print("CodeTenet plugin validation passed.")
+          PY
