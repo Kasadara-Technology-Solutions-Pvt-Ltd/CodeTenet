@@ -1,0 +1,13 @@
+{
+  "name": "kasadara-plugins",
+  "owner": {
+    "name": "Kasadara Technology Solutions"
+  },
+  "plugins": [
+    {
+      "name": "codetenet",
+      "source": "./",
+      "description": "A comprehensive, language-agnostic software engineering skill that guides AI coding agents through architecture, implementation, debugging, refactoring, security, performance, testing, and code reviews using established engineering principles and laws."
+    }
+  ]
+}

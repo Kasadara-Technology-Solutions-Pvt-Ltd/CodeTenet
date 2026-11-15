@@ -7,6 +7,11 @@
 
 **Principles first. Better code always.**
 
+
+## Text and formatting policy
+
+CodeTenet uses only characters available on a standard US QWERTY keyboard for authored text. Documentation, generated advice, code comments, release notes, and examples must use printable ASCII (plus line breaks and tabs). Avoid emoji, smart quotes, Unicode arrows, mathematical symbols, and box-drawing characters. Preserve technical meaning while substituting plain-text equivalents. Do not alter identifiers or data values just to satisfy typography rules; use ASCII escape sequences where technically appropriate.
+
 A unified, language-agnostic engineering assistant skill for requirements analysis, architecture, feature delivery, debugging, legacy refactoring, reliability, security, performance, APIs, testing and code reviews.
 
 ## What's in this repository
@@ -28,7 +33,7 @@ PUBLISHING.md                             # Directory launch checklist
 **Skill identifier:** `software-engineering`  
 **Tagline:** Principles first. Better code always.
 
-The repository has been verified as public and currently empty. This release ZIP is the prepared repository content, not proof of publication. The connected GitHub integration has read access but not push access. License selection, CLI validation and Claude Directory review are still pending.
+The public CodeTenet repository hosts the published skill. Claude Directory listing, local CLI validation, publisher contact, icon selection, and license compliance review remain independent release steps.
 
 ## Try locally before publication
 
@@ -55,16 +60,16 @@ See [PUBLISHING.md](PUBLISHING.md) for a release checklist and suggested directo
 
 Use this skill when you need:
 
-- **Build a feature:** “Add pagination and sorting to this API, preserving response compatibility. Include edge cases and automated tests.”
-- **Investigate a defect:** “Diagnose why this Windows service hangs after several hours; identify root cause before patching and validate shutdown.”
-- **Refactor:** “Reduce duplication in these services without coupling unrelated domain rules. Keep the external behavior unchanged.”
-- **Architecture:** “Compare a modular monolith and microservices for our actual constraints; explicitly discuss operational cost, change boundaries and reversibility.”
-- **Security review:** “Audit authorization and logging paths; identify sensitive fields leaked to telemetry and propose fixes.”
-- **Database migration:** “Add a nonnullable field to a populated table with a safe rollout, backfill, rollback plan and tests.”
-- **Performance:** “Profile this endpoint before changing its implementation; report actual measurements and regression checks.”
-- **Distributed messaging:** “Design duplicate-safe message handling with idempotency and clear failure recovery.”
-- **Testing:** “Design risk-based unit, integration and contract tests for this API without chasing a vanity coverage score.”
-- **Code review:** “Review this PR for correctness, security, concurrency, compatibility and unnecessary abstractions; prioritize findings by severity.”
+- **Build a feature:** "Add pagination and sorting to this API, preserving response compatibility. Include edge cases and automated tests."
+- **Investigate a defect:** "Diagnose why this Windows service hangs after several hours; identify root cause before patching and validate shutdown."
+- **Refactor:** "Reduce duplication in these services without coupling unrelated domain rules. Keep the external behavior unchanged."
+- **Architecture:** "Compare a modular monolith and microservices for our actual constraints; explicitly discuss operational cost, change boundaries and reversibility."
+- **Security review:** "Audit authorization and logging paths; identify sensitive fields leaked to telemetry and propose fixes."
+- **Database migration:** "Add a nonnullable field to a populated table with a safe rollout, backfill, rollback plan and tests."
+- **Performance:** "Profile this endpoint before changing its implementation; report actual measurements and regression checks."
+- **Distributed messaging:** "Design duplicate-safe message handling with idempotency and clear failure recovery."
+- **Testing:** "Design risk-based unit, integration and contract tests for this API without chasing a vanity coverage score."
+- **Code review:** "Review this PR for correctness, security, concurrency, compatibility and unnecessary abstractions; prioritize findings by severity."
 
 The original unified skill README and the full 12-scenario playbooks are preserved below.
 
@@ -80,16 +85,16 @@ A **single comprehensive, language-agnostic skill** merging the *Enterprise Prog
 
 ```text
 skills/software-engineering/
-├── SKILL.md                                 # Core AI instructions + YAML frontmatter
-├── references/
-│   ├── programming-standards.md            # Detailed coding and operational rules
-│   ├── architecture-decision-guide.md      # Laws, boundaries and ADR template
-│   ├── testing-verification.md             # Test matrices and evidence requirements
-│   ├── principle-conflicts.md              # Trade-off decisions with examples
-│   └── code-review-checklist.md            # Concise review gate
-└── examples/
-    ├── scenario-playbooks.md               # 12 scenario walkthroughs
-    └── agent-task-template.md              # Reusable request template
+ SKILL.md                                 # Core AI instructions + YAML frontmatter
+ references/
+    programming-standards.md            # Detailed coding and operational rules
+    architecture-decision-guide.md      # Laws, boundaries and ADR template
+    testing-verification.md             # Test matrices and evidence requirements
+    principle-conflicts.md              # Trade-off decisions with examples
+    code-review-checklist.md            # Concise review gate
+ examples/
+     scenario-playbooks.md               # 12 scenario walkthroughs
+     agent-task-template.md              # Reusable request template
 ```
 
 ## Installation
@@ -225,3 +230,7 @@ claude plugin install codetenet@kasadara-plugins
 ```
 
 The public GitHub repository exists, but must contain the plugin files before installation. The official Claude Directory submission does not require a separate marketplace.
+
+## Anthropic directory policy
+
+See [DIRECTORY_POLICY_COMPLIANCE.md](DIRECTORY_POLICY_COMPLIANCE.md) for documented safety and security measures, sample review prompts, and outstanding publisher verification items. The plugin itself has no bundled MCP servers, hooks, telemetry, account system, or automatic external network calls. The publisher must confirm ownership and submission compliance before claiming directory approval.

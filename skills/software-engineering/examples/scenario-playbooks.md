@@ -1,4 +1,4 @@
-# Scenario Playbooks — Applying the Skill
+# Scenario Playbooks - Applying the Skill
 
 These are patterns for agent reasoning, **not** commands to add framework layers. Each scenario includes what to inspect, what to implement, and how to verify.
 

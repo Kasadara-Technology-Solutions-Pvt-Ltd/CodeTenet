@@ -44,3 +44,13 @@ claude plugin install codetenet@kasadara-plugins
 **Description:** A comprehensive, language-agnostic software engineering skill that guides AI coding agents through architecture, implementation, debugging, refactoring, security, performance, testing, and code reviews using established engineering principles and laws.
 
 The official Anthropic Directory and an independently hosted Claude Code marketplace are different distribution channels. No directory approval is implied by a valid manifest.
+
+## Directory submission preflight
+
+1. Confirm `.claude-plugin/plugin.json` has plugin name `codetenet`.
+2. Run `claude plugin validate .` locally and document the results.
+3. Add an approved square PNG or JPEG icon before directory submission.
+4. Verify publisher support and security reporting details; do not invent contact information.
+5. Review `DIRECTORY_POLICY_COMPLIANCE.md`, including sample test prompts and publisher commitments.
+6. Verify IP rights for skill content, code, brand assets, and any third-party references.
+7. Submit to Anthropic and do not claim acceptance before approval.

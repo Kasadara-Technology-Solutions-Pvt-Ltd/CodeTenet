@@ -1,4 +1,4 @@
-# Architecture and Engineering Laws — Decision Guide
+# Architecture and Engineering Laws - Decision Guide
 
 ## Context-first decision procedure
 1. Identify functional requirements, constraints and observable compatibility contracts.
@@ -43,7 +43,7 @@ Revisit when: [Concrete new condition]
 ```
 
 ## Layering test
-A boundary is justified when it manages an independent responsibility, unstable dependency, security/trust concern, cohesive domain policy or independent deployment/ownership. Avoid defaulting to controllers → interfaces → services → managers → factories → repositories for every tiny operation.
+A boundary is justified when it manages an independent responsibility, unstable dependency, security/trust concern, cohesive domain policy or independent deployment/ownership. Avoid defaulting to controllers -> interfaces -> services -> managers -> factories -> repositories for every tiny operation.
 
 ## Change-safety checklist
 - External callers and stored data mapped

@@ -26,7 +26,7 @@
 
 ## 4. Dependencies and abstractions
 - Prefer platform capabilities and already approved libraries when fit for purpose. Evaluate licenses, supply-chain security, maintenance, runtime cost and size for additions.
-- An interface or design pattern needs actual variation, a boundary, contract value, or a testability benefit—not merely a SOLID label.
+- An interface or design pattern needs actual variation, a boundary, contract value, or a testability benefit-not merely a SOLID label.
 - Deduplicate shared business *knowledge*. Do not couple unrelated features solely to remove repeated syntax.
 - Favor composition for reusable behavior; inheritance only when the subtype truly honors base-class contracts.
 - Avoid speculative plugin systems, broad configuration matrices and placeholder extension points.
