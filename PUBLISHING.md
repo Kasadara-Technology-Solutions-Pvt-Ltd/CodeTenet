@@ -1,4 +1,4 @@
-# CodeTenet — Publishing Checklist
+# CodeTenet - Publishing Checklist
 
 **Product:** CodeTenet  
 **Publisher:** Kasadara Technology Solutions  
