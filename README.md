@@ -1,6 +1,9 @@
 # CodeTenet - Claude Plugin by Kasadara
 
-**Publisher: Kasadara Technology Solutions** | **Owner: Kasadara** | **Version: 1.0.0** | Documentation-only plugin | No MCP servers, hooks, executables, network access, or runtime dependencies.
+**Publisher: Kasadara Technology Solutions** 
+**Version: 1.0.0** 
+#### Documentation-only plugin 
+#### No MCP servers, hooks, executables, network access, or runtime dependencies.
 
 **Principles first. Better code always.**
 
