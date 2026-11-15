@@ -1,7 +1,7 @@
 {
   "name": "codetenet",
   "version": "1.0.0",
-  "icon": "codetenet-logo.png"
+  "icon": "codetenet-logo.png",
   "description": "A comprehensive, language-agnostic software engineering skill that guides AI coding agents through architecture, implementation, debugging, refactoring, security, performance, testing, and code reviews using established engineering principles and laws.",
   "author": {
     "name": "Kasadara Technology Solutions",
